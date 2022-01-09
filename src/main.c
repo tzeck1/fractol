@@ -6,7 +6,7 @@
 /*   By: tom <tom@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 13:00:37 by tzeck             #+#    #+#             */
-/*   Updated: 2022/01/09 17:18:37 by tom              ###   ########.fr       */
+/*   Updated: 2022/01/09 17:28:32 by tom              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	print_help(void)
 
 static void	set_fractal(t_data *data, char *input)
 {
-	data->iter = 42;
+	data->iter = 21;
 	data->min = set_complex(-2.0, -2.0);
 	data->max = set_complex(2.0, 2.0);
 	if (WIN_HEIGHT > WIN_WIDTH)
