@@ -6,13 +6,13 @@
 #    By: tom <tom@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/06 17:08:54 by tzeck             #+#    #+#              #
-#    Updated: 2022/01/09 16:50:53 by tom              ###   ########.fr        #
+#    Updated: 2022/01/13 19:12:35 by tom              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fractol
 
-CFILES = src/main.c src/utils.c src/draw.c src/formulars.c
+CFILES = src/main.c src/utils.c src/draw.c src/formulars.c src/controls.c src/color.c
 
 OBJECTS = $(CFILES:.c=.o)
 
@@ -26,7 +26,7 @@ MLX = minilibx_macos/libmlx.a -I minilibx_macos -lmlx -framework OpenGL -framewo
 
 CFLAGS = -Wall -Wextra -Werror
 
-all: pre_makes $(NAME) clean
+all: pre_makes $(NAME)
 
 pre_makes:
 	make -C $(LIBFT_PATH)

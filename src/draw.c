@@ -6,19 +6,21 @@
 /*   By: tom <tom@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 16:07:56 by tom               #+#    #+#             */
-/*   Updated: 2022/01/09 16:47:11 by tom              ###   ########.fr       */
+/*   Updated: 2022/01/12 19:33:26 by tom              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
+/* uses window size and factor to calculate something */
 void	draw_fractal(t_data *data)
 {
 	int	x;
 	int	y;
 	int	color;
 
-	data->factor = set_complex((data->max.real - data->min.real) / WIN_WIDTH, (data->max.imag - data->min.imag) / WIN_HEIGHT);
+	data->factor = set_complex((data->max.real - data->min.real) / WIN_WIDTH,
+			(data->max.imag - data->min.imag) / WIN_HEIGHT);
 	y = 0;
 	while (y < WIN_HEIGHT)
 	{
@@ -28,7 +30,6 @@ void	draw_fractal(t_data *data)
 		{
 			data->c.real = data->min.real + x * data->factor.real;
 			color = get_color(data->formula(data), data);
-			// printf("color: %x\n", color);
 			my_mlx_pixel_put(data, x, y, color);
 			x++;
 		}

@@ -6,13 +6,14 @@
 /*   By: tom <tom@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 16:50:05 by tom               #+#    #+#             */
-/*   Updated: 2022/01/09 16:57:03 by tom              ###   ########.fr       */
+/*   Updated: 2022/01/13 14:02:40 by tom              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-unsigned int set_mandel(t_data *data)
+/* returns iterations until z escapes the set or max_iter is reached */
+unsigned int	set_mandel(t_data *data)
 {
 	unsigned int	iteration;
 	t_complex		z;
