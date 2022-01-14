@@ -6,7 +6,7 @@
 /*   By: tom <tom@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 17:24:47 by tom               #+#    #+#             */
-/*   Updated: 2022/01/13 19:16:54 by tom              ###   ########.fr       */
+/*   Updated: 2022/01/14 18:52:32 by tom              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /* if 'esc' is pressed */
 int	exit_win(t_data	*data)
 {
+	free(data);
 	mlx_destroy_image(data->mlx, data->image.img);
 	mlx_destroy_window(data->mlx, data->win);
 	exit(0);
